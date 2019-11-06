@@ -23,5 +23,19 @@ const reducer = (state = initialState, action) => {
 
     // ACTION: Add a random circle
 
+    if (type === "ADDCIRCLE") {
+        let circle = {
+            radius: action.radius,
+            color: action.color
+        }
+        console.log(circle)
+
+        return (
+            [...state, circle]
+        )
+        
+    }
+    
+        console.log(state)
     return state;
 }
