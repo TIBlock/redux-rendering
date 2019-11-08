@@ -7,16 +7,16 @@ dispatch({ type: null }); // Here we're making a call to dispatch() - this trigg
 
 // Write DOM event listeners here, make them dispatch actions to the Redux store
 
-const addCircle = document.getElementById("addCircle");
+const addCircle = document.getElementById('addCircle');
 
-addCircle.addEventListener("click", e => {
-  var randomColor = "#" + ((Math.random() * 0xffffff) << 0).toString(16);
+addCircle.addEventListener('click', e => {
+	var randomColor = '#' + ((Math.random() * 0xffffff) << 0).toString(16);
 
-  var randomRadius = Math.floor(Math.random() * Math.floor(100));
+	var randomRadius = Math.floor(Math.random() * Math.floor(100));
 
-  dispatch({
-    type: "ADDCIRCLE",
-    radius: randomRadius,
-    color: randomColor
-  });
+	dispatch({
+		type: 'ADDCIRCLE',
+		radius: randomRadius,
+		color: randomColor
+	});
 });
