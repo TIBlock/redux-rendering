@@ -17,5 +17,5 @@ addName.addEventListener('submit', e => {
 		value: nameValue
 	});
 
-	document.getElementById('name-input').value = '';
+	// document.getElementById('name-input').value = '';
 });

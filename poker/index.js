@@ -5,13 +5,28 @@ subscribe(() => render(getState()));
 
 dispatch({ type: null }); // Here we're making a call to dispatch() - this triggers the first render.
 
-// Write DOM event listeners here, make them dispatch actions to the Redux store 
+// Write DOM event listeners here, make them dispatch actions to the Redux store
 
-const = addOneCard = document.getElementById('card1Button');
+const changeCardOne = document.getElementById('card1Button');
+const changeCardTwo = document.getElementById('card2Button');
 
-addOneCard.addEventListener('click', e => {
+changeCardOne.addEventListener('click', e => {
+    e.preventDefault();
     
-    dispatch({
-        type:"ADDONECARD"
-    })
-})
+    let compileCardOne = () {
+
+    }
+
+	dispatch({
+		type: 'CHANGECARDONE'
+	});
+});
+
+changeCardTwo.addEventListener('click', e => {
+	e.preventDefault();
+	dispatch({
+		type: 'CHANGECARDTWO'
+	});
+});
+
+// class deck 
