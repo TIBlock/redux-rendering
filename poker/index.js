@@ -7,26 +7,25 @@ dispatch({ type: null }); // Here we're making a call to dispatch() - this trigg
 
 // Write DOM event listeners here, make them dispatch actions to the Redux store
 
-const changeCardOne = document.getElementById('card1Button');
-const changeCardTwo = document.getElementById('card2Button');
+const changeCardOne = document.getElementById("card1Button");
+const changeCardTwo = document.getElementById("card2Button");
 
-changeCardOne.addEventListener('click', e => {
-    e.preventDefault();
-    
-    let compileCardOne = () {
+changeCardOne.addEventListener("click", e => {
+  e.preventDefault();
 
-    }
-
-	dispatch({
-		type: 'CHANGECARDONE'
-	});
+  dispatch({
+    type: "CHANGECARD",
+    card: 0
+  });
 });
 
-changeCardTwo.addEventListener('click', e => {
-	e.preventDefault();
-	dispatch({
-		type: 'CHANGECARDTWO'
-	});
+changeCardTwo.addEventListener("click", e => {
+  e.preventDefault();
+
+  dispatch({
+    type: "CHANGECARD",
+    card: 1
+  });
 });
 
-// class deck 
+// class deck
